@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador con JavaScript</title>
+    <style>
+        #counter {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>Valor actual: <span id="counter">0</span></p>
+    <button id="increment">Incrementar</button>
+    <button id="decrement">Decrementar</button>
+
+    <script>
+        // Obtén elementos del DOM
+        const counterElement = document.getElementById("counter");
+        const incrementButton = document.getElementById("increment");
+        const decrementButton = document.getElementById("decrement");
+
+        // Inicializa el contador
+        let counterValue = 0;
+        counterElement.textContent = counterValue;
+
+        // Agrega un manejador de eventos para el botón de incremento
+        incrementButton.addEventListener("click", function() {
+            counterValue++;
+            counterElement.textContent = counterValue;
+        });
+
+        // Agrega un manejador de eventos para el botón de decremento
+        decrementButton.addEventListener("click", function() {
+            counterValue--;
+            counterElement.textContent = counterValue;
+        });
+    </script>
+</body>
+</html>
